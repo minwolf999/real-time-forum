@@ -1,0 +1,134 @@
+body {
+    background: linear-gradient(to bottom right, #16202b, #213fb4, #a8defc);
+    width: 99vw;
+    height: 97.3vh;
+}
+
+h2 {
+    background: linear-gradient(to bottom right, rgb(133, 224, 255), rgb(48, 96, 255));
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+
+    font-size: 26px;
+    text-shadow:
+    0 0 2px #000000,
+    0 0 100px #000fe7;
+
+    color: white;
+    width: 48%;
+    padding: 0.5%;
+    border-radius: 50px;
+    
+    position: relative;
+    top: 32vh;
+}
+
+.form {
+    background: linear-gradient(to bottom right, rgb(133, 224, 255), rgb(48, 96, 255));
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+
+    color: rgba(107, 107, 107, 0.7);
+    width: 50vw;
+    height: 18vh;
+    padding: 0.5%;
+    border-radius: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+div:not(#content, .form, #error) {
+    background: linear-gradient(to bottom right, #16202b, #213fb4, #a8defc);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+
+    color: whitesmoke;
+
+    font-weight: bold;
+    
+    width: 50%;
+
+    margin: 2.5%;
+    padding: 0.5%;
+    padding-bottom: 1%;
+    border-radius: 50px;
+}
+
+input {
+    border-radius: 50px;
+    text-align: center;
+}
+
+input[type=submit] {
+    border-radius: 50px;
+
+    position: relative;
+    width: 8vw;
+    height: 2.5vh;
+
+    left: 46.5%;
+    top: -12vh;
+}
+
+button {
+    border-radius: 50px;
+
+    position: relative;
+    width: 8vw;
+    height: 2.5vh;
+}
+
+.register {
+    left: 30%;
+    top: -8vh;
+}
+
+.visitor {
+    left: 29%;
+    top: 9.8vh;
+}
+
+p {
+    background-color: rgba(255, 0, 0, 0.7);
+    color: whitesmoke;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    display: flex;
+    align-items: center;
+
+    width: 11vw;
+    height: 16vh;
+
+    padding: 0.5%;
+    border-radius: 1000%;
+
+    position: relative;
+    top: 11.5vh;
+    left: -19vw;
+}
+
+img {
+    width: 6%;
+
+    position: relative;
+    top: 32vh;
+}
+
+.img1 {
+
+    left: -22.1vw;
+}
+
+.img2 {
+    left: 28.5vw;
+
+    transform: scaleX(-1);
+}
+
+.img3 {
+    top: 7.5vh;
+    left: -6.5vw;
+
+    z-index: 30;
+}

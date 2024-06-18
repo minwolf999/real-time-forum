@@ -1,0 +1,32 @@
+.bodyLeft {
+    background: linear-gradient(to bottom right, rgb(133, 224, 255), rgb(48, 96, 255));
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+
+    position: relative;
+    top: 8vh;
+    left: 1%;
+
+    border-radius: 50px;
+
+    width: 20vw;
+    height: fit-content;
+    max-height: 90vh;
+
+    overflow: scroll;
+    scrollbar-width: none;
+}
+
+.categorie {
+    position: relative;
+    left: 2vw;
+    top: 1vh;
+
+    margin: 1%;
+    border-radius: 50px;
+
+    width: 16vw;
+    height: 5vh;
+
+    font-size: 18px;
+    font-style: italic;
+}
