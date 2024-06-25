@@ -134,6 +134,28 @@ func GetUserByEmail(email string) error {
 	return nil
 }
 
+func GetUserByEmailOrUsername(email, username string) error {
+	db, err := initialisation.OpenBDD()
+	if err != nil {
+		return err
+	}
+
+	datas, err := db.Query("SELECT * FROM `Users` WHERE `Email`=? OR `Username`=?", email, username)
+	if err != nil {
+		return err
+	}
+	defer datas.Close()
+
+	for datas.Next() {
+		err = datas.Scan(&structure.User.Id, &structure.User.Username, &structure.User.Age, &structure.User.Gender, &structure.User.FirstName, &structure.User.LastName, &structure.User.Email, &structure.User.Password, &structure.User.RegistrationDate, &structure.User.Role, &structure.User.Connected, &structure.User.ImagePath)
+		if err != nil {
+			return err
+		}
+	}
+
+	return nil
+}
+
 /*
 This function takes 1 string has argument:
   - an uuid

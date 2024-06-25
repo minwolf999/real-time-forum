@@ -14,14 +14,14 @@ import (
 
 /*
 This function takes 3 arguments:
-	- a Response Writer from the import net/http
-	- a map who contain the datas send by the websocket
-	- a connection to an open websocket
+  - a Response Writer from the import net/http
+  - a map who contain the datas send by the websocket
+  - a connection to an open websocket
 
 The objective of this function is to manage the login page.
 
 The function gonna return:
-	- an error
+  - an error
 */
 func LogInHandle(w http.ResponseWriter, loginForm map[string]string, conn *websocket.Conn) error {
 	structure.User = structure.Users{}
@@ -29,7 +29,7 @@ func LogInHandle(w http.ResponseWriter, loginForm map[string]string, conn *webso
 	response := make(map[string]map[string]any)
 	response["login"] = make(map[string]any)
 
-	err := users.GetUserByEmail(loginForm["email"])
+	err := users.GetUserByEmailOrUsername(loginForm["email"], loginForm["email"])
 	if err != nil {
 		response["login"]["error"] = err.Error()
 
